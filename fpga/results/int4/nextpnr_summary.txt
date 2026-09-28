@@ -1,0 +1,225 @@
+Info: Device utilisation:
+Info: 	          TRELLIS_IO:      79/    197    40%
+Info: 	                DCCA:       1/     56     1%
+Info: 	              DP16KD:       0/     56     0%
+Info: 	          MULT18X18D:       4/     28    14%
+Info: 	              ALU54B:       0/     14     0%
+Info: 	             EHXPLLL:       0/      2     0%
+Info: 	             EXTREFB:       0/      1     0%
+Info: 	                DCUA:       0/      1     0%
+Info: 	           PCSCLKDIV:       0/      2     0%
+Info: 	             IOLOGIC:       0/    128     0%
+Info: 	            SIOLOGIC:       0/     69     0%
+Info: 	                 GSR:       0/      1     0%
+Info: 	               JTAGG:       0/      1     0%
+Info: 	                OSCG:       0/      1     0%
+Info: 	               SEDGA:       0/      1     0%
+Info: 	                 DTR:       0/      1     0%
+Info: 	             USRMCLK:       0/      1     0%
+Info: 	             CLKDIVF:       0/      4     0%
+Info: 	           ECLKSYNCB:       0/     10     0%
+Info: 	             DLLDELD:       0/      8     0%
+Info: 	              DDRDLL:       0/      4     0%
+Info: 	             DQSBUFM:       0/      8     0%
+Info: 	     TRELLIS_ECLKBUF:       0/      8     0%
+Info: 	        ECLKBRIDGECS:       0/      2     0%
+Info: 	                DCSC:       0/      2     0%
+Info: 	          TRELLIS_FF:     423/  24288     1%
+Info: 	        TRELLIS_COMB:    2910/  24288    11%
+Info: 	        TRELLIS_RAMW:       0/   3036     0%
+
+Info: Critical path report for clock '$glbnet$clk$TRELLIS_IO_IN' (posedge -> posedge):
+Info:       type curr  total name
+Info:   clk-to-q  0.52  0.52 Source start_LUT4_C_Z_TRELLIS_FF_CE_Q_TRELLIS_FF_Q_1.Q
+Info:    routing  0.92  1.44 Net start_LUT4_C_Z_TRELLIS_FF_CE_Q[2] (4,5) -> (4,6)
+Info:                          Sink u_accel.dut.gen_pe[1].u_pe.product_ext_MULT18X18D_P7_B1_LUT4_Z_D_LUT4_Z_B_TRELLIS_FF_Q_1_CE_TRELLIS_FF_CE_Q_LUT4_Z_1.D
+Info:                          Defined in:
+Info:                               /home/muhammad-ali/oss-cad-suite/lib/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.24  1.68 Source u_accel.dut.gen_pe[1].u_pe.product_ext_MULT18X18D_P7_B1_LUT4_Z_D_LUT4_Z_B_TRELLIS_FF_Q_1_CE_TRELLIS_FF_CE_Q_LUT4_Z_1.F
+Info:    routing  0.88  2.56 Net act_wr_en_LUT4_A_Z_TRELLIS_FF_CE_1_Q_LUT4_B_Z_LUT4_Z_B[3] (4,6) -> (4,4)
+Info:                          Sink u_accel.dut.gen_pe[3].u_pe.product_ext_MULT18X18D_P7_B1_LUT4_Z_D_TRELLIS_FF_Q_CE_TRELLIS_FF_CE_Q_LUT4_B.C
+Info:                          Defined in:
+Info:                               /home/muhammad-ali/oss-cad-suite/lib/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.24  2.80 Source u_accel.dut.gen_pe[3].u_pe.product_ext_MULT18X18D_P7_B1_LUT4_Z_D_TRELLIS_FF_Q_CE_TRELLIS_FF_CE_Q_LUT4_B.F
+Info:    routing  0.90  3.70 Net u_accel.dut.gen_pe[3].u_pe.product_ext_MULT18X18D_P7_B1_LUT4_Z_D_TRELLIS_FF_Q_CE_TRELLIS_FF_CE_Q_LUT4_B_Z[3] (4,4) -> (4,3)
+Info:                          Sink u_accel.dut.gen_pe[3].u_pe.product_ext_MULT18X18D_P7_B1_LUT4_Z_D_TRELLIS_FF_Q_CE_TRELLIS_FF_CE_1_Q_LUT4_B_Z_LUT4_Z_B_TRELLIS_FF_Q_CE_TRELLIS_FF_CE_Q_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /home/muhammad-ali/oss-cad-suite/lib/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.24  3.94 Source u_accel.dut.gen_pe[3].u_pe.product_ext_MULT18X18D_P7_B1_LUT4_Z_D_TRELLIS_FF_Q_CE_TRELLIS_FF_CE_1_Q_LUT4_B_Z_LUT4_Z_B_TRELLIS_FF_Q_CE_TRELLIS_FF_CE_Q_LUT4_Z.F
+Info:    routing  1.42  5.35 Net u_accel.dut.gen_pe[3].u_pe.product_ext_MULT18X18D_P7_B1_LUT4_Z_D_TRELLIS_FF_Q_CE_TRELLIS_FF_CE_1_Q_LUT4_B_Z_LUT4_Z_B_TRELLIS_FF_Q_CE_TRELLIS_FF_CE_Q[3] (4,3) -> (9,12)
+Info:                          Sink u_accel.dut.gen_pe[3].u_pe.product_ext_MULT18X18D_P7_B1_LUT4_Z_D_TRELLIS_FF_Q_CE_TRELLIS_FF_CE_1_Q_LUT4_B_Z_LUT4_Z_B_TRELLIS_FF_Q_CE_TRELLIS_FF_CE_Q_LUT4_D.D
+Info:                          Defined in:
+Info:                               /home/muhammad-ali/oss-cad-suite/lib/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.24  5.59 Source u_accel.dut.gen_pe[3].u_pe.product_ext_MULT18X18D_P7_B1_LUT4_Z_D_TRELLIS_FF_Q_CE_TRELLIS_FF_CE_1_Q_LUT4_B_Z_LUT4_Z_B_TRELLIS_FF_Q_CE_TRELLIS_FF_CE_Q_LUT4_D.F
+Info:    routing  1.24  6.83 Net u_accel.dut.gen_pe[3].u_pe.product_ext_MULT18X18D_P7_B1_LUT4_Z_D_TRELLIS_FF_Q_CE_TRELLIS_FF_CE_1_Q_LUT4_B_Z_LUT4_Z_B_TRELLIS_FF_Q_CE_TRELLIS_FF_CE_Q_LUT4_D_Z (9,12) -> (9,13)
+Info:                          Sink u_accel.dut.gen_pe[3].u_pe.product_ext_MULT18X18D_P7.B15
+Info:      logic  3.93  10.76 Source u_accel.dut.gen_pe[3].u_pe.product_ext_MULT18X18D_P7.P5
+Info:    routing  1.75  12.51 Net u_accel.dut.gen_pe[3].u_pe.product_ext[5] (9,13) -> (8,4)
+Info:                          Sink y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.A
+Info:                          Defined in:
+Info:                               /home/muhammad-ali/Documents/GitHub/low-power-edge-ai-asic-accelerator/rtl/processing_element.sv:52.37-52.48
+Info:      logic  0.45  12.95 Source y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  12.95 Net y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN (8,4) -> (9,4)
+Info:                          Sink y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /home/muhammad-ali/Documents/GitHub/low-power-edge-ai-asic-accelerator/rtl/processing_element.sv:69.20-69.37
+Info:                               /home/muhammad-ali/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /home/muhammad-ali/oss-cad-suite/lib/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  13.03 Source y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  13.03 Net y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_FCI_INT (9,4) -> (9,4)
+Info:                          Sink y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  13.03 Source y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  13.03 Net y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN (9,4) -> (9,4)
+Info:                          Sink y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /home/muhammad-ali/Documents/GitHub/low-power-edge-ai-asic-accelerator/rtl/processing_element.sv:69.20-69.37
+Info:                               /home/muhammad-ali/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /home/muhammad-ali/oss-cad-suite/lib/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  13.10 Source y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  13.10 Net y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_FCI_INT (9,4) -> (9,4)
+Info:                          Sink y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  13.10 Source y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  13.10 Net y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN (9,4) -> (9,4)
+Info:                          Sink y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /home/muhammad-ali/Documents/GitHub/low-power-edge-ai-asic-accelerator/rtl/processing_element.sv:69.20-69.37
+Info:                               /home/muhammad-ali/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /home/muhammad-ali/oss-cad-suite/lib/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  13.17 Source y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  13.17 Net y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_FCI_INT (9,4) -> (9,4)
+Info:                          Sink y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  13.17 Source y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  13.17 Net y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN (9,4) -> (9,4)
+Info:                          Sink y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /home/muhammad-ali/Documents/GitHub/low-power-edge-ai-asic-accelerator/rtl/processing_element.sv:69.20-69.37
+Info:                               /home/muhammad-ali/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /home/muhammad-ali/oss-cad-suite/lib/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  13.24 Source y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  13.24 Net y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_FCI_INT (9,4) -> (9,4)
+Info:                          Sink y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  13.24 Source y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  13.24 Net y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN (9,4) -> (10,4)
+Info:                          Sink y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /home/muhammad-ali/Documents/GitHub/low-power-edge-ai-asic-accelerator/rtl/processing_element.sv:69.20-69.37
+Info:                               /home/muhammad-ali/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /home/muhammad-ali/oss-cad-suite/lib/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  13.31 Source y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  13.31 Net y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_FCI_INT (10,4) -> (10,4)
+Info:                          Sink y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  13.31 Source y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  13.31 Net y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN (10,4) -> (10,4)
+Info:                          Sink y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /home/muhammad-ali/Documents/GitHub/low-power-edge-ai-asic-accelerator/rtl/processing_element.sv:69.20-69.37
+Info:                               /home/muhammad-ali/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /home/muhammad-ali/oss-cad-suite/lib/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  13.38 Source y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  13.38 Net y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_FCI_INT (10,4) -> (10,4)
+Info:                          Sink y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  13.38 Source y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  13.38 Net y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN (10,4) -> (10,4)
+Info:                          Sink y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /home/muhammad-ali/Documents/GitHub/low-power-edge-ai-asic-accelerator/rtl/processing_element.sv:69.20-69.37
+Info:                               /home/muhammad-ali/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /home/muhammad-ali/oss-cad-suite/lib/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  13.45 Source y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  13.45 Net y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_FCI_INT (10,4) -> (10,4)
+Info:                          Sink y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  13.45 Source y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  13.45 Net y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN (10,4) -> (10,4)
+Info:                          Sink y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /home/muhammad-ali/Documents/GitHub/low-power-edge-ai-asic-accelerator/rtl/processing_element.sv:69.20-69.37
+Info:                               /home/muhammad-ali/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /home/muhammad-ali/oss-cad-suite/lib/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  13.52 Source y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  13.52 Net y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_FCI_INT (10,4) -> (10,4)
+Info:                          Sink y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  13.52 Source y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  13.52 Net y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN (10,4) -> (11,4)
+Info:                          Sink y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /home/muhammad-ali/Documents/GitHub/low-power-edge-ai-asic-accelerator/rtl/processing_element.sv:69.20-69.37
+Info:                               /home/muhammad-ali/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /home/muhammad-ali/oss-cad-suite/lib/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  13.59 Source y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  13.59 Net y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_FCI_INT (11,4) -> (11,4)
+Info:                          Sink y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  13.59 Source y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  13.59 Net y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN (11,4) -> (11,4)
+Info:                          Sink y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /home/muhammad-ali/Documents/GitHub/low-power-edge-ai-asic-accelerator/rtl/processing_element.sv:69.20-69.37
+Info:                               /home/muhammad-ali/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /home/muhammad-ali/oss-cad-suite/lib/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  13.66 Source y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  13.66 Net y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_FCI_INT (11,4) -> (11,4)
+Info:                          Sink y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  13.66 Source y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  13.66 Net y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN (11,4) -> (11,4)
+Info:                          Sink y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /home/muhammad-ali/Documents/GitHub/low-power-edge-ai-asic-accelerator/rtl/processing_element.sv:69.20-69.37
+Info:                               /home/muhammad-ali/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /home/muhammad-ali/oss-cad-suite/lib/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  13.74 Source y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  13.74 Net y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_FCI_INT (11,4) -> (11,4)
+Info:                          Sink y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  13.74 Source y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  13.74 Net y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_CIN (11,4) -> (11,4)
+Info:                          Sink y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /home/muhammad-ali/Documents/GitHub/low-power-edge-ai-asic-accelerator/rtl/processing_element.sv:69.20-69.37
+Info:                               /home/muhammad-ali/oss-cad-suite/lib/../share/yosys/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /home/muhammad-ali/oss-cad-suite/lib/../share/yosys/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  13.81 Source y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  13.81 Net y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT$CCU2_FCI_INT (11,4) -> (11,4)
+Info:                          Sink y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.40  14.21 Source y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT$CCU2_COMB1.F
+Info:    routing  0.70  14.91 Net y_out_CCU2C_S1_3_B0_LUT4_Z_D_CCU2C_B0_CIN_CCU2C_COUT_S1[2] (11,4) -> (11,5)
+Info:                          Sink y_out_CCU2C_S1_3_CIN_CCU2C_COUT_B1_LUT4_Z_C_TRELLIS_FF_Q_DI_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /home/muhammad-ali/oss-cad-suite/lib/../share/yosys/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.24  15.14 Source y_out_CCU2C_S1_3_CIN_CCU2C_COUT_B1_LUT4_Z_C_TRELLIS_FF_Q_DI_LUT4_Z.F
+Info:    routing  0.13  15.27 Net y_out_CCU2C_S1_3_CIN_CCU2C_COUT_B1_LUT4_Z_C_TRELLIS_FF_Q_DI (11,5) -> (11,5)
+Info:                          Sink y_out_CCU2C_S1_3_CIN_CCU2C_COUT_B1_LUT4_Z_C_TRELLIS_FF_Q.DI
+Info:      setup  0.00  15.27 Source y_out_CCU2C_S1_3_CIN_CCU2C_COUT_B1_LUT4_Z_C_TRELLIS_FF_Q.DI
+Info: 7.33 ns logic, 7.94 ns routing
+
+Info: [I/O path listings omitted]
+
+Info: Max frequency for clock '$glbnet$clk$TRELLIS_IO_IN': 65.48 MHz (PASS at 50.00 MHz)
+
+Info: Max delay <async>                           -> <async>                          : 24.99 ns
+Info: Max delay <async>                           -> posedge $glbnet$clk$TRELLIS_IO_IN: 6.41 ns
+Info: Max delay posedge $glbnet$clk$TRELLIS_IO_IN -> <async>                          : 18.57 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 4 endpoint(s)
+Info:          + represents [1,4) endpoint(s)
+Info: [  4727,   5444) |****+
+Info: [  5444,   6161) |*********+
+Info: [  6161,   6878) |***********+
+Info: [  6878,   7595) |**+
+Info: [  7595,   8312) |+
+Info: [  8312,   9029) | 
+Info: [  9029,   9746) | 
+Info: [  9746,  10463) | 
+Info: [ 10463,  11180) | 
+Info: [ 11180,  11897) | 
+Info: [ 11897,  12614) | 
+Info: [ 12614,  13331) | 
+Info: [ 13331,  14048) | 
+Info: [ 14048,  14765) | 
+Info: [ 14765,  15482) | 
+Info: [ 15482,  16199) |***+
+Info: [ 16199,  16916) |***********************************************+
+Info: [ 16916,  17633) |************************************************************ 
+Info: [ 17633,  18350) |********+
+Info: [ 18350,  19067) |+
+79 warnings, 0 errors
+
+Info: Program finished normally.
