@@ -1,0 +1,14 @@
+# Lattice ECP5 LFE5U-25F (CABGA256, speed grade 6) constraints for fpga_top.
+#
+# Target clock is 50 MHz (20 ns) -- the same CLOCK_PERIOD the SKY130
+# OpenLane runs used (designs/accelerator_int*_parallel/config.json), so
+# "does it meet the ASIC's clock target" is a like-for-like question.
+# nextpnr still reports the achieved Fmax of the placed-and-routed design,
+# which is the number results/metrics.csv records.
+FREQUENCY PORT "clk" 50 MHZ;
+
+# No LOCATE constraints on purpose: fpga_top exposes the accelerator's raw
+# parallel host interface (~100 pins for INT8), which is not wired to any
+# real board. nextpnr places the I/Os itself; the resulting bitstream is a
+# fit/timing artifact, not a board-deployable image. A board build needs a
+# serial (e.g. UART) front end that owns the host interface instead.
