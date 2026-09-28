@@ -62,6 +62,7 @@ bigger one): **8 inputs → 4 output neurons → ReLU → 4 INT8 outputs**,
 | 3 | Verified accelerator through OpenLane → GDSII | **Done for the INT8 4-way parallel baseline (2026-09-08, Sprint 4+5).** OpenLane `v1.0.2` run tag `project_run_02` completed synthesis → floorplan → PDN → placement → CTS → routing → parasitic extraction → STA → DRC → LVS → antenna → GDSII for `accelerator_top`. DRC 0, LVS 0, XOR 0, route/setup/hold violations 0; CTS is real (clocked, worst setup slack 3.74 ns, worst hold slack 0.16 ns); 23 pin / 19 net antenna violations and max-fanout warnings are documented follow-up, not silently cleared. Curated evidence: `results/int8_parallel/{metrics.csv,signoff.md,accelerator_top_project_run_02.gds}` and `screenshots/int8_parallel/`. See `docs/sprints/sprint_05_rtl_to_gdsii.md` "How to verify Sprint 5". Baseline's own `mac_core`/`silicon_npu` variants remain *reportedly* taken through OpenLane by the original SiliconNPU authors, unreproduced-by-this-project's-measurement — see `docs/baseline_reference.md`. |
 | 4 | INT8/INT4 × sequential/parallel four-point study | **Parallel axis complete (Sprint 7, 2026-09-08).** `int4_parallel` closed through OpenLane to GDSII (`project_run_01`), DRC/LVS/XOR/route/setup-hold clean — see `results/int4_parallel/`. `results/comparison.csv` has measured area (-29.9%), power/energy (-62.8%), and synthetic accuracy (-9.4 pts) for `int8_parallel` vs `int4_parallel`. The sequential-schedule axis (`int8_sequential`, `int4_sequential`) was deliberately descoped in Sprint 6 (`docs/optimization_plan.md`, "one axis only") — this is a pre-registered scope cut, not unfinished work; do not silently start it without re-reading that doc's reasoning first. |
 | 5 | Package: figures, report, CV/SOP language | **Figures and report complete (Sprint 8, 2026-09-09).** Ten required figures in `docs/figures/` (+3 supplemental), technical report in `docs/report/report.md`, root `README.md` results table filled in from `results/comparison.csv`. CV/SOP paragraph in `docs/research_methodology.md` remains deliberately unwritten — gated on adopting a real dataset (current accuracy numbers are synthetic quantization-noise, not task accuracy). |
+| FPGA | Second target: same RTL on Lattice ECP5 LFE5U-25F | **Done (2026-09-28, branch `fpga-target`).** `fpga/` (wrapper + `.lpf` + Makefile, Yosys/nextpnr-ecp5/Trellis from OSS CAD Suite in `~/oss-cad-suite`). Bit-exact on RTL + Yosys post-synth netlist for INT8 and INT4. Measured numbers only in `fpga/results/metrics.csv`; FPGA power is *not measured*. Never change `rtl/` for FPGA reasons -- put FPGA-only fixes in `fpga/rtl/` behind a define. |
 
 ## Hard rules
 
@@ -92,7 +93,7 @@ bigger one): **8 inputs → 4 output neurons → ReLU → 4 INT8 outputs**,
   scope, see `docs/research_question.md`.
 - **Keep work inside the existing folders** — `algorithm/`, `rtl/`,
   `verification/`, `designs/`, `flow/`, `results/`, `docs/`, `scripts/`,
-  `openmac/`, `tests/`. Don't create a parallel tree (e.g. a new
+  `openmac/`, `tests/`, `fpga/`. Don't create a parallel tree (e.g. a new
   `python_reference/`) when a sprint doc names an existing folder.
 - **Never commit** `OpenLane/` (local install, ~1.2 GB), PDK trees,
   `.venv/`, Docker caches, `*.vcd`, simulator binaries, or raw
@@ -184,6 +185,7 @@ docs/           Architecture/verification/PD/research plan — see Ground truth 
 openmac/        Inherited Python ASIC-flow analysis/report-parsing library
 scripts/        Simulation and OpenLane helper scripts (this project's + inherited)
 tests/          Unit tests for openmac/ (not algorithm/ — that has its own tests/)
+fpga/           ECP5 FPGA target: wrapper, constraints, Makefile flow, curated results (see fpga/README.md)
 ```
 
 ## Before you state anything is "done" or cite a number
