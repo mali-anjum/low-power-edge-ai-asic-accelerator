@@ -1,0 +1,12 @@
+int8        rtl      golden    VECTORS: 5  PASS: 5  FAIL: 0  RESULT: BIT-EXACT
+int8        rtl      extended  VECTORS: 1125  PASS: 1125  FAIL: 0  RESULT: BIT-EXACT
+int8        netlist  golden    VECTORS: 5  PASS: 5  FAIL: 0  RESULT: BIT-EXACT
+int8        netlist  extended  VECTORS: 1125  PASS: 1125  FAIL: 0  RESULT: BIT-EXACT
+int4        rtl      golden    VECTORS: 5  PASS: 5  FAIL: 0  RESULT: BIT-EXACT
+int4        rtl      extended  VECTORS: 1125  PASS: 1125  FAIL: 0  RESULT: BIT-EXACT
+int4        netlist  golden    VECTORS: 5  PASS: 5  FAIL: 0  RESULT: BIT-EXACT
+int4        netlist  extended  VECTORS: 1125  PASS: 1125  FAIL: 0  RESULT: BIT-EXACT
+int8_nodsp  netlist  golden    VECTORS: 5  PASS: 5  FAIL: 0  RESULT: BIT-EXACT
+int8_nodsp  netlist  extended  VECTORS: 1125  PASS: 1125  FAIL: 0  RESULT: BIT-EXACT
+int4_nodsp  netlist  golden    VECTORS: 5  PASS: 5  FAIL: 0  RESULT: BIT-EXACT
+int4_nodsp  netlist  extended  VECTORS: 1125  PASS: 1125  FAIL: 0  RESULT: BIT-EXACT

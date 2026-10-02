@@ -1,0 +1,131 @@
+
+8. Printing statistics.
+
+=== fpga_top ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       20 wires
+       82 wire bits
+       20 public wires
+       82 public wire bits
+       17 ports
+       79 port bits
+        3 cells
+        1   LUT4
+        2   TRELLIS_FF
+        1 submodules
+        1   accelerator_top_int4
+
+=== accelerator_top_int4 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       17 wires
+       79 wire bits
+       17 public wires
+       79 public wire bits
+       17 ports
+       79 port bits
+        1 submodules
+        1   $paramod\accelerator_top\DATA_WIDTH=s32'00000000000000000000000000000100
+
+=== $paramod\controller\NUM_MACS=s32'00000000000000000000000000001000 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       28 wires
+       34 wire bits
+       28 public wires
+       34 public wire bits
+        8 ports
+       10 port bits
+       27 cells
+        1   L6MUX21
+       17   LUT4
+        4   PFUMX
+        5   TRELLIS_FF
+
+=== $paramod$f2b5f49f7af23d652b00cccb2e2f721034b946bd\processing_element ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      177 wires
+      420 wire bits
+      177 public wires
+      420 public wire bits
+       11 ports
+       83 port bits
+      169 cells
+       16   CCU2C
+       78   LUT4
+        1   MULT18X18D
+       10   PFUMX
+       64   TRELLIS_FF
+
+=== $paramod$3b0506346efd5ee83d07f2b98c28d0903d047d51\requantize ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      947 wires
+     1282 wire bits
+      947 public wires
+     1282 public wire bits
+        3 ports
+       41 port bits
+      960 cells
+       35   CCU2C
+      129   L6MUX21
+      567   LUT4
+      229   PFUMX
+
+=== $paramod\accelerator_top\DATA_WIDTH=s32'00000000000000000000000000000100 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      225 wires
+      489 wire bits
+      225 public wires
+      489 public wire bits
+       17 ports
+       79 port bits
+      229 cells
+       53   LUT4
+       16   PFUMX
+      160   TRELLIS_FF
+        9 submodules
+        4   $paramod$3b0506346efd5ee83d07f2b98c28d0903d047d51\requantize
+        4   $paramod$f2b5f49f7af23d652b00cccb2e2f721034b946bd\processing_element
+        1   $paramod\controller\NUM_MACS=s32'00000000000000000000000000001000
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+     4775 fpga_top
+      229   $paramod\accelerator_top\DATA_WIDTH=s32'00000000000000000000000000000100
+      960     $paramod$3b0506346efd5ee83d07f2b98c28d0903d047d51\requantize
+      169     $paramod$f2b5f49f7af23d652b00cccb2e2f721034b946bd\processing_element
+       27     $paramod\controller\NUM_MACS=s32'00000000000000000000000000001000
+
+        +----------Count including submodules.
+        | 
+     4786 wires
+     7492 wire bits
+     4786 public wires
+     7492 public wire bits
+      115 ports
+      743 port bits
+        - memories
+        - memory bits
+        - processes
+     4775 cells
+      204   CCU2C
+      517   L6MUX21
+     2651   LUT4
+        4   MULT18X18D
+      976   PFUMX
+      423   TRELLIS_FF
+        1 submodules
+        1   accelerator_top_int4
+

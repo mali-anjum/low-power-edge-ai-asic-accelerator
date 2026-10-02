@@ -48,6 +48,17 @@ RTL → synthesis → floorplan → placement → CTS → routing → DRC → LV
 
 The active Version 1 accelerator config is [designs/accelerator_int8_parallel/config.json](designs/accelerator_int8_parallel/config.json): `CLOCK_PORT` is `clk`, `CLOCK_PERIOD` is 20 ns, `FP_CORE_UTIL` is 35, and `PL_TARGET_DENSITY` is 0.50. The INT8 4-way baseline has been taken through the full RTL-to-GDSII chain with OpenLane run `project_run_02` (Sprint 5): DRC, LVS, XOR, routing, setup, and hold are clean; CTS is real (worst setup slack 3.74 ns, worst hold slack 0.16 ns); 23 pin / 19 net antenna violations and max-fanout warnings are documented, not silently dropped. Curated PPA is in [results/int8_parallel/metrics.csv](results/int8_parallel/metrics.csv), signoff detail in [results/int8_parallel/signoff.md](results/int8_parallel/signoff.md), the final GDS in `results/int8_parallel/accelerator_top_project_run_02.gds`, and floorplan/placement/routing screenshots rendered from that GDS in [screenshots/int8_parallel/](screenshots/int8_parallel/).
 
+## FPGA target (Lattice ECP5)
+
+The same, unmodified RTL is also built for a Lattice ECP5 LFE5U-25F (CABGA256, speed grade 6) with the open-source Yosys + nextpnr-ecp5 + Project Trellis flow (`cd fpga && make fpga sim metrics`). The only FPGA-specific logic is a thin top wrapper that adds a 2-flop reset synchroniser. Both variants are bit-exact against the Python golden model, on the RTL and on Yosys's post-synthesis netlist (5 frozen golden vectors + 1,125 extended vectors per variant).
+
+| Variant | LUT/carry slots (TRELLIS_COMB) | Flip-flops | DSP (MULT18X18D) | BRAM | Fmax (post-route) |
+|---|---:|---:|---:|---:|---:|
+| INT8 | 3,084 | 583 | 4 | 0 | 66.36 MHz |
+| INT4 | 2,910 | 423 | 4 | 0 | 65.48 MHz |
+
+On SKY130, INT8→INT4 cut area by 29.9%. On the FPGA it saves 5.6% of LUT/carry slots and 27.4% of flip-flops, but no DSPs and no Fmax: each 8×8 or 4×4 multiply occupies one whole hard 18×18 DSP either way. Full results, the ASIC-vs-FPGA table, the seed sweep and the reproduction steps are in [fpga/README.md](fpga/README.md).
+
 ## Repository layout
 
 ```text
@@ -58,6 +69,7 @@ verification/   Testbenches and reference vectors
 designs/        OpenLane configs per design variant (Experiment 0 / this project's own runs)
 flow/           SiliconNPU baseline's OpenLane orchestration (Makefile, config.tcl, openlane_config/)
 results/        Curated metrics and final GDS artifacts
+fpga/           Second target: ECP5 FPGA wrapper, constraints, Makefile flow, results
 docs/           This project's architecture, verification, PD, research plan ("My Docs"),
                 including baseline_reference.md (single source of truth for the former docs1/)
                 and architecture_spec.md (Version 1 accelerator port/FSM/memory-map contract)
